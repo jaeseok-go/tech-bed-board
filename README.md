@@ -10,6 +10,24 @@
 6. 이벤트 기반 프로그래밍
 7. 스프링 시큐리티
 
+# 멀티모듈 구성
+![multi_module_architecture](./image/multi_module.architecture.png)
+
+### tech-bed-common
+시스템에 독립적인 유틸성 공통코드를 관리하는 모듈
+
+### tech-bed-infra
+데이터베이스, 캐시 등 인프라 영역에 관련된 역할을 담당하는 모듈
+
+### tech-bed-domain
+도메인과 관련된 역할을 담당하는 모듈
+
+### tech-bed-apis
+클라이언트(액터)에게 제공할 기능을 담당하는 모듈
+
+### tech-bed-admin
+관리자(액터)에게 제공할 기능을 담당하는 모듈
+
 # Requirements
 ### 1. 회원
 1) 구글계정으로 `회원가입`한다.
