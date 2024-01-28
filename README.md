@@ -11,7 +11,7 @@
 7. 스프링 시큐리티
 
 # 멀티모듈 구성
-![multi_module_architecture](./image/multi_module.architecture.png)
+![multi_module_architecture](./image/multi_module_architecture.jpg)
 
 ### tech-bed-common
 시스템에 독립적인 유틸성 공통코드를 관리하는 모듈
