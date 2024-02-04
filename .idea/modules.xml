@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tech-bed-admin/tech-bed-board.tech-bed-admin.main.iml" filepath="$PROJECT_DIR$/.idea/modules/tech-bed-admin/tech-bed-board.tech-bed-admin.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tech-bed-apis/tech-bed-board.tech-bed-apis.main.iml" filepath="$PROJECT_DIR$/.idea/modules/tech-bed-apis/tech-bed-board.tech-bed-apis.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tech-bed-domain/tech-bed-board.tech-bed-domain.main.iml" filepath="$PROJECT_DIR$/.idea/modules/tech-bed-domain/tech-bed-board.tech-bed-domain.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tech-bed-infra/tech-bed-board.tech-bed-infra.main.iml" filepath="$PROJECT_DIR$/.idea/modules/tech-bed-infra/tech-bed-board.tech-bed-infra.main.iml" />
+    </modules>
+  </component>
+</project>
