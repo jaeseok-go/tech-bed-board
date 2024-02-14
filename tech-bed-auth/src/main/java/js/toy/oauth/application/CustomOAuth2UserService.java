@@ -5,17 +5,17 @@ import js.toy.member.application.dto.MemberCreateRequest;
 import js.toy.member.application.dto.MemberModifyRequest;
 import js.toy.member.application.exception.MemberNotFoundException;
 import js.toy.member.domain.MemberRole;
+import js.toy.oauth.domain.OAuth2Member;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.oauth2.client.userinfo.DefaultOAuth2UserService;
 import org.springframework.security.oauth2.client.userinfo.OAuth2UserRequest;
 import org.springframework.security.oauth2.client.userinfo.OAuth2UserService;
 import org.springframework.security.oauth2.core.OAuth2AuthenticationException;
-import org.springframework.security.oauth2.core.user.DefaultOAuth2User;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Service;
 
-import java.util.Collections;
+import java.util.List;
 import java.util.Map;
 
 @Service
@@ -42,10 +42,11 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
 
         saveMember(email, name, role);
 
-        return new DefaultOAuth2User(
-                Collections.singleton(new SimpleGrantedAuthority(role.getRoleKey())),
+        return new OAuth2Member(
+                registrationId,
                 attributes,
-                userNameAttributeName
+                List.of(new SimpleGrantedAuthority(role.getRoleKey())),
+                email
         );
     }
 

@@ -1,7 +1,9 @@
 rootProject.name = 'tech-bed-board'
 include 'tech-bed-apis'
 include 'tech-bed-admin'
+include 'tech-bed-auth'
 include 'tech-bed-infra'
 include 'tech-bed-domain'
 include 'tech-bed-common'
+
 

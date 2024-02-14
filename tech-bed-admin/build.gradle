@@ -5,6 +5,7 @@ dependencies {
 
     implementation project(':tech-bed-domain')
     implementation project(':tech-bed-infra')
+    implementation project(':tech-bed-auth')
     implementation project(':tech-bed-common')
 }
 
