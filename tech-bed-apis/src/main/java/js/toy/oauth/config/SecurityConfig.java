@@ -33,8 +33,8 @@ public class SecurityConfig {
                 .csrf(CsrfConfigurer::disable)
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/h2-console/**").permitAll()
-                        .requestMatchers("/api/**").hasRole(MemberRole.USER.getRoleKey())
-                        .anyRequest().authenticated())
+                        .requestMatchers("/api/**").permitAll()
+                        .anyRequest().permitAll())
                 .oauth2Login(oauth2 -> oauth2
                         .userInfoEndpoint(endPoint -> endPoint
                                         .userService(oAuth2UserService)

@@ -78,6 +78,8 @@ public class JwtHandler {
                 .getBody()
                 .getSubject();
 
+        // roles는 항상 문자열로 입력되기 때문에 형변환해도 문제없다.
+        @SuppressWarnings(value = {"unchecked"})
         List<String> roles = Jwts.parser()
                 .setSigningKey(secret)
                 .parseClaimsJws(accessToken)
