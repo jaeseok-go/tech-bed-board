@@ -1,4 +1,4 @@
-package js.toy.oauth.config;
+package js.toy.security.config;
 
 import js.toy.jwt.filter.JwtAuthenticationFilter;
 import js.toy.member.domain.MemberRole;
@@ -13,7 +13,6 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.config.annotation.web.configurers.CsrfConfigurer;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 @RequiredArgsConstructor
 @EnableWebSecurity
@@ -32,9 +31,10 @@ public class SecurityConfig {
         return http
                 .csrf(CsrfConfigurer::disable)
                 .authorizeHttpRequests(auth -> auth
+                        .requestMatchers("/**/api/**").hasRole(MemberRole.USER.getKey())
                         .requestMatchers("/h2-console/**").permitAll()
-                        .requestMatchers("/api/**").permitAll()
-                        .anyRequest().permitAll())
+                        .requestMatchers("**/auth-pass/**").permitAll()
+                        .anyRequest().authenticated())
                 .oauth2Login(oauth2 -> oauth2
                         .userInfoEndpoint(endPoint -> endPoint
                                         .userService(oAuth2UserService)

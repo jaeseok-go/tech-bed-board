@@ -1,13 +1,22 @@
 package js.toy.member.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-
-@AllArgsConstructor
-@Getter
 public enum MemberRole {
     USER("USER"),
     ADMIN("ADMIN");
 
-    private String roleKey;
+    private final static String PREFIX = "ROLE_";
+
+    private String key;
+
+    MemberRole(String key) {
+        this.key = key;
+    }
+
+    public String getKey() {
+        return this.key;
+    }
+
+    public String getFullKey() {
+        return PREFIX + this.key;
+    }
 }
