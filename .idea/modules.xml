@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/tech-bed-admin/tech-bed-board.tech-bed-admin.main.iml" filepath="$PROJECT_DIR$/.idea/modules/tech-bed-admin/tech-bed-board.tech-bed-admin.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/tech-bed-apis/tech-bed-board.tech-bed-apis.main.iml" filepath="$PROJECT_DIR$/.idea/modules/tech-bed-apis/tech-bed-board.tech-bed-apis.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tech-bed-auth/tech-bed-board.tech-bed-auth.test.iml" filepath="$PROJECT_DIR$/.idea/modules/tech-bed-auth/tech-bed-board.tech-bed-auth.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/tech-bed-common/tech-bed-board.tech-bed-common.main.iml" filepath="$PROJECT_DIR$/.idea/modules/tech-bed-common/tech-bed-board.tech-bed-common.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/tech-bed-domain/tech-bed-board.tech-bed-domain.main.iml" filepath="$PROJECT_DIR$/.idea/modules/tech-bed-domain/tech-bed-board.tech-bed-domain.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/tech-bed-infra/tech-bed-board.tech-bed-infra.main.iml" filepath="$PROJECT_DIR$/.idea/modules/tech-bed-infra/tech-bed-board.tech-bed-infra.main.iml" />
