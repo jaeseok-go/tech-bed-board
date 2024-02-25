@@ -9,6 +9,8 @@ import js.toy.member.domain.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @RequiredArgsConstructor
 @Service
 public class MemberService {
@@ -28,7 +30,7 @@ public class MemberService {
         memberRepository.save(Member.builder()
                 .email(memberCreateReq.getEmail())
                 .name(memberCreateReq.getName())
-                .role(memberCreateReq.getRole())
+                .roles(List.of(memberCreateReq.getRole()))
                 .build());
     }
 
@@ -45,7 +47,7 @@ public class MemberService {
         memberRepository.save(Member.builder()
                 .email(memberModifyReq.getEmail())
                 .name(memberModifyReq.getName())
-                .role(memberModifyReq.getRole())
+                .roles(memberModifyReq.getRoles())
                 .build());
     }
 }

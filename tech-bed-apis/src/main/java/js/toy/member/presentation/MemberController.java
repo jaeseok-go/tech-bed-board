@@ -1,6 +1,5 @@
 package js.toy.member.presentation;
 
-import js.toy.member.application.MemberService;
 import js.toy.response.TechBedResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import java.util.List;
+
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
@@ -13,5 +15,5 @@ import lombok.ToString;
 public class MemberModifyRequest {
     private String email;
     private String name;
-    private MemberRole role;
+    private List<MemberRole> roles;
 }

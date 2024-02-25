@@ -1,15 +1,15 @@
 package js.toy.member.domain;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.NoArgsConstructor;
+import js.toy.common.BaseEntity;
+import lombok.*;
 
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
+import java.util.List;
+
+@Getter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Entity
-public class Member {
+public class Member extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,5 +23,12 @@ public class Member {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private MemberRole role;
+    private List<MemberRole> roles;
+
+    @Builder
+    public Member(String email, String name, List<MemberRole> roles) {
+        this.email = email;
+        this.name = name;
+        this.roles = roles;
+    }
 }

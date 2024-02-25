@@ -53,7 +53,7 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
     // 회원정보를 최신정보로 수정, 회원정보가 없으면 회원가입
     private void saveMember(String email, String name, MemberRole role) {
         try {
-            memberService.modify(new MemberModifyRequest(email, name, role));
+            memberService.modify(new MemberModifyRequest(email, name, List.of(role)));
         } catch (MemberNotFoundException e) {
             memberService.create(new MemberCreateRequest(email, name, role));
         }
